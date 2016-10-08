@@ -24,6 +24,14 @@ protected:
 
     void draw();
 
+    void drawFirstBottomEdge();
+    void drawFirstTopEdge();
+    void drawFirstSideEdges();
+
+    void drawSecondBottomEdge();
+    void drawSecondTopEdge();
+    void drawSecondSideEdges();
+
     QSize minimumSizeHint() const;
     QSize sizeHint() const;
 
