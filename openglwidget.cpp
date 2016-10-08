@@ -62,43 +62,17 @@ void OpenGLWidget::normalizedGlVertex3d(double x, double y, double z)
 void OpenGLWidget::draw()
 {
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-/*
+
     glColor3d(76, 153, 0);
     drawFirstBottomEdge();
     drawFirstTopEdge();
     drawFirstSideEdges();
-*/
+
 
      glColor3d (1, 0, 0);
      drawSecondBottomEdge();
      drawSecondTopEdge();
      drawSecondSideEdges();
-/*
-
-      glBegin (GL_LINES);
-        normalizedGlVertex3d(0.1, 0.15, 0);
-        normalizedGlVertex3d(0.1, 0.15, 1);
-
-        normalizedGlVertex3d(0.25, 0.2, 0);
-        normalizedGlVertex3d(0.25, 0.2, 1);
-
-        normalizedGlVertex3d(0.4, 0.15, 0);
-        normalizedGlVertex3d(0.4, 0.15, 1);
-
-        normalizedGlVertex3d(0.3, 0.25, 0);
-        normalizedGlVertex3d(0.3, 0.25, 1);
-
-        normalizedGlVertex3d(0.25, 0.38, 0);
-        normalizedGlVertex3d(0.25, 0.38, 1);
-
-        normalizedGlVertex3d(0.2, 0.25, 0);
-        normalizedGlVertex3d(0.2, 0.25, 1);
-
-        normalizedGlVertex3d(0.1, 0.15, 0);
-        normalizedGlVertex3d(0.1, 0.15, 1);
-      glEnd();
-
-      */
 }
 
 void OpenGLWidget::drawFirstBottomEdge()
@@ -292,58 +266,107 @@ void OpenGLWidget::drawFirstSideEdges()
 void OpenGLWidget::drawSecondBottomEdge()
 {
    glBegin (GL_POLYGON);
-    normalizedGlVertex3d(0.1, 0.15, 0);
-    normalizedGlVertex3d(0.25, 0.2, 0);
-    normalizedGlVertex3d(0.25, 0.25, 0);
-    normalizedGlVertex3d(0.2, 0.25, 0);
-    normalizedGlVertex3d(0.1, 0.15, 0);
+        normalizedGlVertex3d(0.1, 0.15, 0);
+        normalizedGlVertex3d(0.25, 0.2, 0);
+        normalizedGlVertex3d(0.25, 0.25, 0);
+        normalizedGlVertex3d(0.2, 0.25, 0);
+        normalizedGlVertex3d(0.1, 0.15, 0);
    glEnd();
 
    glBegin (GL_POLYGON);
-    normalizedGlVertex3d(0.2, 0.25, 0);
-    normalizedGlVertex3d(0.3, 0.25, 0);
-    normalizedGlVertex3d(0.25, 0.38, 0);
-    normalizedGlVertex3d(0.2, 0.25, 0);
+        normalizedGlVertex3d(0.2, 0.25, 0);
+        normalizedGlVertex3d(0.3, 0.25, 0);
+        normalizedGlVertex3d(0.25, 0.38, 0);
+        normalizedGlVertex3d(0.2, 0.25, 0);
    glEnd();
 
    glBegin (GL_POLYGON);
-    normalizedGlVertex3d(0.25, 0.2, 0);
-    normalizedGlVertex3d(0.4, 0.15, 0);
-    normalizedGlVertex3d(0.3, 0.25, 0);
-    normalizedGlVertex3d(0.25, 0.25, 0);
-    normalizedGlVertex3d(0.25, 0.2, 0);
+        normalizedGlVertex3d(0.25, 0.2, 0);
+        normalizedGlVertex3d(0.4, 0.15, 0);
+        normalizedGlVertex3d(0.3, 0.25, 0);
+        normalizedGlVertex3d(0.25, 0.25, 0);
+        normalizedGlVertex3d(0.25, 0.2, 0);
    glEnd();
 }
 
 void OpenGLWidget::drawSecondTopEdge()
 {
     glBegin (GL_POLYGON);
-     normalizedGlVertex3d(0.1, 0.15, 1);
-     normalizedGlVertex3d(0.25, 0.2, 1);
-     normalizedGlVertex3d(0.25, 0.25, 1);
-     normalizedGlVertex3d(0.2, 0.25, 1);
-     normalizedGlVertex3d(0.1, 0.15, 1);
+        normalizedGlVertex3d(0.1, 0.15, 1);
+        normalizedGlVertex3d(0.25, 0.2, 1);
+        normalizedGlVertex3d(0.25, 0.25, 1);
+        normalizedGlVertex3d(0.2, 0.25, 1);
+        normalizedGlVertex3d(0.1, 0.15, 1);
     glEnd();
 
     glBegin (GL_POLYGON);
-     normalizedGlVertex3d(0.2, 0.25, 1);
-     normalizedGlVertex3d(0.3, 0.25, 1);
-     normalizedGlVertex3d(0.25, 0.38, 1);
-     normalizedGlVertex3d(0.2, 0.25, 1);
+        normalizedGlVertex3d(0.2, 0.25, 1);
+        normalizedGlVertex3d(0.3, 0.25, 1);
+        normalizedGlVertex3d(0.25, 0.38, 1);
+        normalizedGlVertex3d(0.2, 0.25, 1);
     glEnd();
 
     glBegin (GL_POLYGON);
-     normalizedGlVertex3d(0.25, 0.2, 1);
-     normalizedGlVertex3d(0.4, 0.15, 1);
-     normalizedGlVertex3d(0.3, 0.25, 1);
-     normalizedGlVertex3d(0.25, 0.25, 1);
-     normalizedGlVertex3d(0.25, 0.2, 1);
+        normalizedGlVertex3d(0.25, 0.2, 1);
+        normalizedGlVertex3d(0.4, 0.15, 1);
+        normalizedGlVertex3d(0.3, 0.25, 1);
+        normalizedGlVertex3d(0.25, 0.25, 1);
+        normalizedGlVertex3d(0.25, 0.2, 1);
     glEnd();
 }
 
 void OpenGLWidget::drawSecondSideEdges()
 {
+    glColor3d(0.5, 0.5, 0);
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.1, 0.15, 0);
+        normalizedGlVertex3d(0.25, 0.2, 0);
+        normalizedGlVertex3d(0.25, 0.2, 1);
+        normalizedGlVertex3d(0.1, 0.15, 1);
+        normalizedGlVertex3d(0.1, 0.15, 0);
+    glEnd();
 
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.25, 0.2, 0);
+        normalizedGlVertex3d(0.4, 0.15, 0);
+        normalizedGlVertex3d(0.4, 0.15, 1);
+        normalizedGlVertex3d(0.25, 0.2, 1);
+        normalizedGlVertex3d(0.25, 0.2, 0);
+    glEnd();
+
+    glColor3d(0.5, 0.9, 0);
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.1, 0.15, 0);
+        normalizedGlVertex3d(0.2, 0.25, 0);
+        normalizedGlVertex3d(0.2, 0.25, 1);
+        normalizedGlVertex3d(0.1, 0.15, 1);
+        normalizedGlVertex3d(0.1, 0.15, 0);
+    glEnd();
+
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.2, 0.25, 0);
+        normalizedGlVertex3d(0.25, 0.38, 0);
+        normalizedGlVertex3d(0.25, 0.38, 1);
+        normalizedGlVertex3d(0.2, 0.25, 1);
+        normalizedGlVertex3d(0.2, 0.25, 0);
+    glEnd();
+
+    glColor3d(0.9, 0.5, 0);
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.4, 0.15, 0);
+        normalizedGlVertex3d(0.3, 0.25, 0);
+        normalizedGlVertex3d(0.3, 0.25, 1);
+        normalizedGlVertex3d(0.4, 0.15, 1);
+        normalizedGlVertex3d(0.4, 0.15, 0);
+    glEnd();
+
+    glBegin (GL_POLYGON);
+        normalizedGlVertex3d(0.3, 0.25, 0);
+        normalizedGlVertex3d(0.25, 0.38, 0);
+        normalizedGlVertex3d(0.25, 0.38, 1);
+        normalizedGlVertex3d(0.3, 0.25, 1);
+        normalizedGlVertex3d(0.3, 0.25, 0);
+    glEnd();
 }
 
 static void normalizeAngle(int &angle)
