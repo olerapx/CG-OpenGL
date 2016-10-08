@@ -62,8 +62,10 @@ void OpenGLWidget::normalizedGlVertex3d(double x, double y, double z)
 
 void OpenGLWidget::draw()
 {
-    drawFirst();
-    drawSecond();
+    if (drawOuter)
+        drawFirst();
+    if (drawInner)
+        drawSecond();
 }
 
 void OpenGLWidget::drawFirst()

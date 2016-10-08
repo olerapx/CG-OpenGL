@@ -17,7 +17,12 @@ public:
     explicit OpenGLWidget(QWidget *parent = 0);
     ~OpenGLWidget();
 
+    inline void setDrawInner(bool draw) {drawInner = draw;}
+    inline void setDrawOuter (bool draw) {drawOuter = draw;}
+
 protected:
+    bool drawInner = true, drawOuter = true;
+
     void initializeGL();
     void resizeGL(int width, int height);
     void paintGL();
