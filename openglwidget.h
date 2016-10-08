@@ -23,6 +23,8 @@ protected:
     void paintGL();
 
     void draw();
+    void drawFirst();
+    void drawSecond();
 
     void drawFirstBottomEdge();
     void drawFirstTopEdge();
