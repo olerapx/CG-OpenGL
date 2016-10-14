@@ -27,6 +27,8 @@ protected:
     void resizeGL(int width, int height);
     void paintGL();
 
+    void initLight();
+
     void draw();
     void drawFirst();
     void drawSecond();
