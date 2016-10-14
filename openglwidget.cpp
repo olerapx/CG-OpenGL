@@ -35,6 +35,9 @@ void OpenGLWidget::initializeGL()
     glEnable(GL_LIGHT1);
     glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
     glEnable(GL_NORMALIZE);
+
+    float ambient[4] = {0, 0, 0, 1};
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambient);
     initLight();
 }
 
@@ -83,9 +86,6 @@ void OpenGLWidget::initLight()
     GLfloat light0_position[4] = { 0, 0, 10, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, light0_position);
 
-    float ambient[4] = {0, 0, 0, 1};
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambient);
-
     GLfloat light0_diffuse[] = {1.0, 0.5, 0.0, 0.0};
     glLightfv(GL_LIGHT0, GL_DIFFUSE, light0_diffuse);
 
@@ -95,12 +95,12 @@ void OpenGLWidget::initLight()
     GLfloat light0_specular[] = {1.0, 1.0, 1.0, 0.0};
     glLightfv(GL_LIGHT0, GL_SPECULAR, light0_specular);
 
-    GLfloat light1_position[4] = {2.0f*xScale + xShift, 5.0f*yScale + yShift, -10.0f*zScale + zShift, 1.0 };
+    GLfloat light1_position[4] = {1.8f*xScale + xShift, 0.0f*yScale + yShift, -5.0f*zScale + zShift, 1.0 };
     glLightfv(GL_LIGHT1, GL_POSITION, light1_position);
 
-    GLfloat light1_spot[] = {0.0f*xScale + xShift, 1.0f*yScale + yShift, 0.0f*zScale + zShift, 1};
+    GLfloat light1_spot[] = {0.0f * xScale + xShift, 0.0f * yScale + yShift, 0.0f * zScale + zShift, 1};
     glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, light1_spot);
-    glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, 180);
+    glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, 90);
 
     GLfloat light1_diffuse[] = {0.5, 1.0, 0.5, 0.0};
     glLightfv(GL_LIGHT1, GL_DIFFUSE, light1_diffuse);
