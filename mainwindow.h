@@ -18,7 +18,7 @@ public:
 private slots:
     void on_drawOuter_clicked();
 
-    void on_drawInner_clicked();
+    void on_drawInner_clicked();    
 
 private:
     Ui::MainWindow *ui;

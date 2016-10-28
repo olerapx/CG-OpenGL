@@ -3,6 +3,7 @@
 
 #include <QGLWidget>
 #include <QMouseEvent>
+#include <iostream>
 
 namespace Ui
 {
@@ -68,6 +69,9 @@ private:
     double xShift = -1, yShift = -1, zShift = -1;
 
     QPoint lastPos;
+
+    GLuint textureID;
+    QImage texture;
 };
 
 #endif // OPENGLWIDGET_H
