@@ -40,7 +40,7 @@ void OpenGLWidget::initializeGL()
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
 
-    QImage temp("./texture.jpg");
+    QImage temp("texture.jpg");
     texture = QGLWidget::convertToGLFormat(temp);
 
     glTexImage2D( GL_TEXTURE_2D, 0, GL_RGBA, texture.width(),  texture.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE,  texture.bits() );

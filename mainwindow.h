@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QFileDialog>
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,8 @@ private slots:
     void on_drawOuter_clicked();
 
     void on_drawInner_clicked();    
+
+    void on_screenButton_clicked();
 
 private:
     Ui::MainWindow *ui;

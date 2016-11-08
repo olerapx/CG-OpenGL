@@ -24,3 +24,15 @@ void MainWindow::on_drawInner_clicked()
     ui->openGLWidget->setDrawInner(ui->drawInner->isChecked());
     ui->openGLWidget->updateGL();
 }
+
+void MainWindow::on_screenButton_clicked()
+{
+    QFileDialog dialog;
+    QString filter =  "BMP (*.bmp)";
+
+    QString filename = dialog.getSaveFileName(this, "Выберите файл", "", filter, &filter);
+    QFile file(filename);
+
+    QImage image = ui->openGLWidget->grabFrameBuffer(true);
+    image.save(&file, "BMP");
+}
