@@ -28,7 +28,7 @@ void MainWindow::on_drawInner_clicked()
 void MainWindow::on_screenButton_clicked()
 {
     QFileDialog dialog;
-    QString filter =  "BMP (*.bmp)";
+    QString filter = "BMP (*.bmp)";
 
     QString filename = dialog.getSaveFileName(this, "Выберите файл", "", filter, &filter);
     QFile file(filename);

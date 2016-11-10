@@ -3,6 +3,7 @@
 
 #include <QGLWidget>
 #include <QMouseEvent>
+#include <QTimer>
 #include <iostream>
 
 namespace Ui
@@ -72,6 +73,11 @@ private:
 
     GLuint textureID;
     QImage texture;
+
+    QTimer *timer;
+
+private slots:
+    void change();
 };
 
 #endif // OPENGLWIDGET_H

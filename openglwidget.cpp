@@ -7,6 +7,11 @@ OpenGLWidget::OpenGLWidget(QWidget *parent) :
     xRot = 0;
     yRot = 0;
     zRot = 0;
+
+    timer = new QTimer();
+    connect(timer, SIGNAL(timeout()), this, SLOT(change()));
+
+    timer->start(10);
 }
 
 OpenGLWidget::~OpenGLWidget()
@@ -26,6 +31,7 @@ QSize OpenGLWidget::sizeHint() const
 
 void OpenGLWidget::initializeGL()
 {
+    setAutoBufferSwap(false);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
@@ -75,6 +81,7 @@ void OpenGLWidget::paintGL()
     glRotatef((double)zRot / 16.0, 0.0, 0.0, 1.0);
 
     draw();
+    swapBuffers();
 }
 
 void OpenGLWidget::normalizedGlVertex3d(double x, double y, double z)
@@ -788,4 +795,13 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent *event)
         setZRotation(zRot + 8 * dx);
     }
     lastPos = event->pos();
+}
+
+void OpenGLWidget::change()
+{
+    xRot+=1;
+    yRot+=1;
+    zRot+=1;
+
+    updateGL();
 }
